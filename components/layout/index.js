@@ -22,8 +22,10 @@ function TaskPage(props) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>
+            <Nav.Link href="/add">Agregar</Nav.Link>
             <Nav.Link href="/balance">Consultar</Nav.Link>
             <Nav.Link href="/recharge">Recargar</Nav.Link>
+            <Nav.Link href="/pay">Pagar</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

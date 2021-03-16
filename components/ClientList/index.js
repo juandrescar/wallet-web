@@ -1,14 +1,11 @@
 import React from 'react';
-import { Table, Button, Container, Col, Row, Link } from 'react-bootstrap';
+import { Table, Container, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWallet, faMoneyCheckAlt } from '@fortawesome/free-solid-svg-icons';
 
 function ClientList(props) {
   const {
     clients
   } = props;
-
 
   return(
     <Container className='mt-5'>

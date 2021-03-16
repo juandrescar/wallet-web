@@ -12,11 +12,22 @@ async function request(url, method, data){
 }
 
 export function index() {
-  console.log("API GET")
   return request(`/clients`, 'get')
 }
 
 export function get(data) {
-  console.log("API GET", data)
   return request(`/clients/balance`, 'post', data)
+}
+
+export function register(data) {
+  return request(`/clients`, 'post', data)
+}
+
+export function recharge(data) {
+  return request(`/clients/recharge`, 'post', data)
+}
+
+export function pay(data) {
+  console.log("API GET", data)
+  return request(`/clients/${data.id}/pays/${data.pay}`, 'post', {code: data.code})
 }
