@@ -43,17 +43,17 @@ var BalanceForm = createReactClass({
         <Form.Label column="sm" lg={2}>
           Documento
         </Form.Label>
-        <Form.Control name="document" size="sm" type="text" placeholder="Add a document"/>
+        <Form.Control name="document" size="sm" type="text" placeholder="Ingrese documento" required/>
         
         <Form.Label column="sm" lg={2}>
           Teléfono
         </Form.Label>
-        <Form.Control name="phone" size="sm" type="text" placeholder="Add a phone"/>
+        <Form.Control name="phone" size="sm" type="text" placeholder="Ingrese teléfono" required/>
         
         <Form.Label column="sm" lg={2}>
           Monto
         </Form.Label>
-        <Form.Control name="value" size="sm" type="text" placeholder="Add a value"/>
+        <Form.Control name="value" size="sm" type="number" placeholder="Ingrese monto a pagar" required min="1"/>
       
         <Button variant="primary" type="submit" size="md" block>
           Guardar

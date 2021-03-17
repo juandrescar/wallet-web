@@ -1,10 +1,9 @@
 import React from 'react';
 import { Form, Button, Col, Container, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {pay} from '../../api/wallet';
+import {confirmPay} from '../../api/wallet';
 var createReactClass = require('create-react-class');
 import router from 'next/router'
-import queryString from "query-string";
 
 var BalanceForm = createReactClass({
   
@@ -20,7 +19,7 @@ var BalanceForm = createReactClass({
     }
 
     var success = true;
-    const res = await pay(data).catch( error => {
+    const res = await confirmPay(data).catch( error => {
       success = false
       return error
     });
@@ -46,7 +45,7 @@ var BalanceForm = createReactClass({
         <Form.Label column="sm" lg={2}>
           Código
         </Form.Label>
-        <Form.Control name="code" size="sm" type="text" placeholder="Add a code"/>
+        <Form.Control name="code" size="sm" type="text" placeholder="Ingrese código" required minlength="6" maxlength="6"/>
       
         <Button variant="primary" type="submit" size="md" block>
           Guardar

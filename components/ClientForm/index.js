@@ -35,19 +35,19 @@ var ClientForm = createReactClass({
         <Form.Label column="sm" lg={2}>
           Nombre
         </Form.Label>
-        <Form.Control name="name" size="sm" type="text" placeholder="Add a name"/>
+        <Form.Control name="name" size="sm" type="text" placeholder="Ingrese nombre (solo letras y espacios)" required pattern="[A-Za-z ]+$"/>
         <Form.Label column="sm" lg={2}>
           Documento
         </Form.Label>
-          <Form.Control name="document" size="sm" type="text" placeholder="Add a document"/>
+          <Form.Control name="document" size="sm" type="text" placeholder="Ingrese documento" required/>
         <Form.Label column="sm" lg={2}>
           Email
         </Form.Label>
-          <Form.Control name="email" size="sm" type="email" placeholder="Add a email"/>
+          <Form.Control name="email" size="sm" type="email" placeholder="Ingrese email" required/>
         <Form.Label column="sm" lg={2}>
           Teléfono
         </Form.Label>
-          <Form.Control name="phone" size="sm" type="text" placeholder="Add a phone"/>
+          <Form.Control name="phone" size="sm" type="text" placeholder="Ingrese teléfono" required/>
       <Button variant="primary" type="submit" size="md" block>
         Guardar
       </Button>

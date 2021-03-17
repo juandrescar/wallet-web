@@ -1,7 +1,6 @@
 import Axios from 'axios';
 
 async function request(url, method, data){
-  console.log("data", data)
   const response = await Axios({
     method: method,
     url: `${process.env.REACT_APP_API_URL}${url}`,
@@ -29,5 +28,9 @@ export function recharge(data) {
 
 export function pay(data) {
   console.log("API GET", data)
+  return request(`/clients/pay`, 'post', data)
+}
+
+export function confirmPay(data) {
   return request(`/clients/${data.id}/pays/${data.pay}`, 'post', {code: data.code})
 }
